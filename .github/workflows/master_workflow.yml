@@ -20,7 +20,7 @@ jobs:
     - name: Build On ${{ matrix.name }}
       continue-on-error: false
       run: |
-        xcodebuild -scheme  NavigationLargeTitleSwiftUI -destination '${{ matrix.destination }}' build
+        xcodebuild -scheme  Bama-Challange -destination '${{ matrix.destination }}' build
     
     strategy:
       fail-fast: false
