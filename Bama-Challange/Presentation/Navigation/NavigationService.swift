@@ -8,6 +8,8 @@
 import SwiftUI
 import Dependencies
 
+// MARK: - Abstraction
+
 public protocol NavigationServiceProtocol {
 
     var pathBinding: Binding<NavigationPath> { get }
@@ -19,9 +21,11 @@ public protocol NavigationServiceProtocol {
     func pop(to value: String)
 }
 
+// MARK: - Implementation
+
 public final class NavigationService: ObservableObject {
 
-    fileprivate static let shared = NavigationService()
+    internal static let shared = NavigationService()
     
     @Published public var path: NavigationPath
 
@@ -59,6 +63,8 @@ extension NavigationService: NavigationServiceProtocol {
         pop(removingCount)
     }
 }
+
+// MARK: - Dependency Registeration
 
 extension DependencyValues {
 

@@ -12,7 +12,7 @@ extension NetworkServices: FetchPostsServiceProtocol {
 
     public func fetchPosts() async throws -> [PostListItem] {
         let result = try await session.data(
-            for: Request()
+            for: PostsRequest()
         )
         guard result.statusCode == .OK else { throw NetworkError.requestFailed }
 
@@ -20,17 +20,45 @@ extension NetworkServices: FetchPostsServiceProtocol {
 
         return response
     }
+
+    public func fetchPost(with id: Int32) async throws -> PostListItem {
+        let result = try await session.data(
+            for: PostRequest(id: id)
+        )
+        guard result.statusCode == .OK else { throw NetworkError.requestFailed }
+
+        let response = try result.decode(to: PostListItem.self)
+
+        return response
+    }
 }
 
-// MARK: - Request
+// MARK: - PostsRequest
 
-fileprivate struct Request {}
+fileprivate struct PostsRequest {}
 
-extension Request: API {
+extension PostsRequest: API {
 
     var gateway: GateWays { .base }
     var method: HTTPMethod { .get }
     var route: String { "posts" }
+}
+
+// MARK: - PostRequest
+
+fileprivate struct PostRequest {
+    private let id: Int32
+
+    fileprivate init(id: Int32) {
+        self.id = id
+    }
+}
+
+extension PostRequest: API {
+
+    var gateway: GateWays { .base }
+    var method: HTTPMethod { .get }
+    var route: String { "posts/\(id)" }
 }
 
 // MARK: - Dependency

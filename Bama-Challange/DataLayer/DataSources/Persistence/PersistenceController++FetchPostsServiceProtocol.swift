@@ -10,9 +10,12 @@ import CoreData
 
 extension PersistenceController: FetchPostsServiceProtocol {
 
-    func fetchPosts() async throws -> [PostListItem] {
+    public func fetchPosts() async throws -> [PostListItem] {
         try await self.viewContext.perform(schedule: .immediate) {
             let request = ListItem.fetchRequest()
+            request.sortDescriptors = [
+                NSSortDescriptor(key: "id", ascending: true)
+            ]
             request.returnsObjectsAsFaults = false
             let result = try self.viewContext.fetch(request)
             return result
@@ -20,9 +23,26 @@ extension PersistenceController: FetchPostsServiceProtocol {
             try PostListItemDAO().translate($0, context: nil)
         }
     }
+
+    public func fetchPost(with id: Int32) async throws -> PostListItem {
+        let fetchedItem: PostListItem? = try await self.viewContext.perform(schedule: .immediate) {
+            let predicate = NSPredicate(format: "id == %i", id)
+            let request = ListItem.fetchRequest()
+
+            request.predicate = predicate
+            request.returnsObjectsAsFaults = false
+            request.fetchLimit = 1
+            let result = try self.viewContext.fetch(request)
+            return result
+        }.map {
+            try PostListItemDAO().translate($0, context: nil)
+        }.first
+        guard let fetchedItem else { throw PersistenceError.requestedItemNotFound }
+        return fetchedItem
+    }
 }
 
-// MARK: - Dependency
+// MARK: - Dependency Registeration
 
 extension DependencyValues {
 

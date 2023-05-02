@@ -10,17 +10,37 @@ import Dependencies
 
 @main
 struct Bama_ChallangeApp: App {
-    let persistenceController = PersistenceController.shared
-
-    @Dependency(\.navigationService) private var navigationService
     
     var body: some Scene {
         WindowGroup {
-            NavigationStack(path: navigationService.pathBinding) {
+            Root(navigationService: NavigationService.shared) {
                 TabPage()
-            }.navigationDestination(for: String.self) { pageTitle in
-                EmptyView()
+                    .navigationDestination(for: String.self) { pageTitle in
+                        switch pageTitle {
+                        case "PostDetailPage":
+                            PostDetailPageView()
+                        default:
+                            EmptyView()
+                        }
+                    }
             }
+        }
+    }
+}
+
+struct Root<Content>: View where Content: View {
+
+    @ObservedObject private var navigationService: NavigationService
+    private let content: () -> Content
+
+    init(navigationService: NavigationService, _ content: @escaping () -> Content) {
+        self.navigationService = navigationService
+        self.content = content
+    }
+    
+    var body: some View {
+        NavigationStack(path: $navigationService.path) {
+            content()
         }
     }
 }

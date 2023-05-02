@@ -6,11 +6,13 @@
 //
 
 import Dependencies
+import Foundation
 
 // MARK: - Abstraction
 
 public protocol FetchPostsRepositoryProtocol {
     func fetchPosts() async throws -> [PostListItem]
+    func fetchPost(with id: Int32) async throws -> PostListItem
 }
 
 // MARK: - Implementation
@@ -35,7 +37,19 @@ extension FetchPostsRepository: FetchPostsRepositoryProtocol {
             return []
         }
     }
+
+    public func fetchPost(with id: Int32) async throws -> PostListItem {
+        if let result = try? await fetchPostsDBService.fetchPost(with: id){
+            return result
+        } else if let result = try? await fetchPostsRemoteService.fetchPost(with: id) {
+            return result
+        } else {
+            throw NSError()
+        }
+    }
 }
+
+// MARK: - Dependency
 
 extension DependencyValues {
     
