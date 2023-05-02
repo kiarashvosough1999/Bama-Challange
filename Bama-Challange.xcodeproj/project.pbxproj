@@ -28,7 +28,7 @@
 		DE2F70B62A00124B00F4F263 /* TitleTextModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2F70B52A00124B00F4F263 /* TitleTextModifier.swift */; };
 		DE2F70B82A00128600F4F263 /* BodyTextModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2F70B72A00128600F4F263 /* BodyTextModifier.swift */; };
 		DE2F70BD2A00142700F4F263 /* MessageQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2F70BC2A00142700F4F263 /* MessageQueue.swift */; };
-		DE2F70BF2A00149400F4F263 /* PostIDService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2F70BE2A00149400F4F263 /* PostIDService.swift */; };
+		DE2F70BF2A00149400F4F263 /* PersistPostIDService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2F70BE2A00149400F4F263 /* PersistPostIDService.swift */; };
 		DE2F70C12A0014FA00F4F263 /* MessageQueue++PersistPostIDServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2F70C02A0014FA00F4F263 /* MessageQueue++PersistPostIDServiceProtocol.swift */; };
 		DE5B142529FE5C4500C56594 /* Bama_ChallangeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5B142429FE5C4500C56594 /* Bama_ChallangeApp.swift */; };
 		DE5B142729FE5C4500C56594 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5B142629FE5C4500C56594 /* Persistence.swift */; };
@@ -38,6 +38,11 @@
 		DE5B143C29FE5C4600C56594 /* Bama_ChallangeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5B143B29FE5C4600C56594 /* Bama_ChallangeTests.swift */; };
 		DE5B144629FE5C4600C56594 /* Bama_ChallangeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5B144529FE5C4600C56594 /* Bama_ChallangeUITests.swift */; };
 		DE5B144829FE5C4600C56594 /* Bama_ChallangeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5B144729FE5C4600C56594 /* Bama_ChallangeUITestsLaunchTests.swift */; };
+		DE8736672A017C0900FDA29F /* FetchUserListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8736662A017C0900FDA29F /* FetchUserListService.swift */; };
+		DE8736692A017CB900FDA29F /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8736682A017CB900FDA29F /* UserModel.swift */; };
+		DE87366B2A017CE100FDA29F /* AddressEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE87366A2A017CE100FDA29F /* AddressEntity.swift */; };
+		DE87366D2A017D0000FDA29F /* GeoEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE87366C2A017D0000FDA29F /* GeoEntity.swift */; };
+		DE87366F2A017D1500FDA29F /* CompanyEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE87366E2A017D1500FDA29F /* CompanyEntity.swift */; };
 		DE8FAE2529FE9F45009D0469 /* TapPostItemUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8FAE2429FE9F45009D0469 /* TapPostItemUseCase.swift */; };
 		DE8FAE2729FEA0FC009D0469 /* FetchPostsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8FAE2629FEA0FC009D0469 /* FetchPostsUseCase.swift */; };
 		DE8FAE2A29FEA331009D0469 /* Dependencies in Frameworks */ = {isa = PBXBuildFile; productRef = DE8FAE2929FEA331009D0469 /* Dependencies */; };
@@ -94,7 +99,7 @@
 		DE2F70B52A00124B00F4F263 /* TitleTextModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleTextModifier.swift; sourceTree = "<group>"; };
 		DE2F70B72A00128600F4F263 /* BodyTextModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodyTextModifier.swift; sourceTree = "<group>"; };
 		DE2F70BC2A00142700F4F263 /* MessageQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageQueue.swift; sourceTree = "<group>"; };
-		DE2F70BE2A00149400F4F263 /* PostIDService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostIDService.swift; sourceTree = "<group>"; };
+		DE2F70BE2A00149400F4F263 /* PersistPostIDService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistPostIDService.swift; sourceTree = "<group>"; };
 		DE2F70C02A0014FA00F4F263 /* MessageQueue++PersistPostIDServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MessageQueue++PersistPostIDServiceProtocol.swift"; sourceTree = "<group>"; };
 		DE5B142129FE5C4500C56594 /* Bama-Challange.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bama-Challange.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE5B142429FE5C4500C56594 /* Bama_ChallangeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bama_ChallangeApp.swift; sourceTree = "<group>"; };
@@ -108,6 +113,11 @@
 		DE5B144129FE5C4600C56594 /* Bama-ChallangeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Bama-ChallangeUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE5B144529FE5C4600C56594 /* Bama_ChallangeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bama_ChallangeUITests.swift; sourceTree = "<group>"; };
 		DE5B144729FE5C4600C56594 /* Bama_ChallangeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bama_ChallangeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		DE8736662A017C0900FDA29F /* FetchUserListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchUserListService.swift; sourceTree = "<group>"; };
+		DE8736682A017CB900FDA29F /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		DE87366A2A017CE100FDA29F /* AddressEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressEntity.swift; sourceTree = "<group>"; };
+		DE87366C2A017D0000FDA29F /* GeoEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoEntity.swift; sourceTree = "<group>"; };
+		DE87366E2A017D1500FDA29F /* CompanyEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyEntity.swift; sourceTree = "<group>"; };
 		DE8FAE2429FE9F45009D0469 /* TapPostItemUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapPostItemUseCase.swift; sourceTree = "<group>"; };
 		DE8FAE2629FEA0FC009D0469 /* FetchPostsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchPostsUseCase.swift; sourceTree = "<group>"; };
 		DE8FAE2B29FEA45A009D0469 /* PostListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListItem.swift; sourceTree = "<group>"; };
@@ -176,7 +186,8 @@
 			children = (
 				DE09635C29FEED1600716928 /* FetchPostsServiceProtocol.swift */,
 				DE09636A29FEF36B00716928 /* PersistPostsServiceProtocol.swift */,
-				DE2F70BE2A00149400F4F263 /* PostIDService.swift */,
+				DE2F70BE2A00149400F4F263 /* PersistPostIDService.swift */,
+				DE8736662A017C0900FDA29F /* FetchUserListService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -352,6 +363,10 @@
 			isa = PBXGroup;
 			children = (
 				DE8FAE2B29FEA45A009D0469 /* PostListItem.swift */,
+				DE8736682A017CB900FDA29F /* UserModel.swift */,
+				DE87366A2A017CE100FDA29F /* AddressEntity.swift */,
+				DE87366C2A017D0000FDA29F /* GeoEntity.swift */,
+				DE87366E2A017D1500FDA29F /* CompanyEntity.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -551,6 +566,7 @@
 			files = (
 				DE8FAE3C29FEAAA7009D0469 /* StatusCode.swift in Sources */,
 				DE5B142529FE5C4500C56594 /* Bama_ChallangeApp.swift in Sources */,
+				DE87366D2A017D0000FDA29F /* GeoEntity.swift in Sources */,
 				DE09636D29FEF37F00716928 /* PersistenceController++PersistPostsServiceProtocol.swift in Sources */,
 				DE09636229FEEEF100716928 /* DAO.swift in Sources */,
 				DEE1D31329FFB7F200B4BBC7 /* PostDetailPageView.swift in Sources */,
@@ -562,14 +578,18 @@
 				DE09635A29FEECAA00716928 /* NetworkServices++FetchPostsServiceProtocol.swift in Sources */,
 				DE8FAE2729FEA0FC009D0469 /* FetchPostsUseCase.swift in Sources */,
 				DE5B142A29FE5C4500C56594 /* Bama_Challange.xcdatamodeld in Sources */,
+				DE8736672A017C0900FDA29F /* FetchUserListService.swift in Sources */,
 				DEEE95C129FE69C40061177C /* TabPage.swift in Sources */,
 				DE2F70BD2A00142700F4F263 /* MessageQueue.swift in Sources */,
 				DE8FAE2C29FEA45A009D0469 /* PostListItem.swift in Sources */,
 				DE8FAE3F29FEAAA7009D0469 /* HTTPMethod.swift in Sources */,
 				DE8FAE4129FEAAA7009D0469 /* NetworkError.swift in Sources */,
 				DEE1D31129FFB7EB00B4BBC7 /* PostDetailPageViewModel.swift in Sources */,
+				DE87366B2A017CE100FDA29F /* AddressEntity.swift in Sources */,
 				DE8FAE3D29FEAAA7009D0469 /* GateWays.swift in Sources */,
 				DE09636529FEF23900716928 /* ListItem+CoreDataClass.swift in Sources */,
+				DE87366F2A017D1500FDA29F /* CompanyEntity.swift in Sources */,
+				DE8736692A017CB900FDA29F /* UserModel.swift in Sources */,
 				DE09636629FEF23900716928 /* ListItem+CoreDataProperties.swift in Sources */,
 				DE8FAE4329FEAC34009D0469 /* FetchPostsRepository.swift in Sources */,
 				DE2F70B42A0011D800F4F263 /* OpacityAnimationModifier.swift in Sources */,
@@ -580,7 +600,7 @@
 				DE8FAE3029FEA715009D0469 /* NavigationService.swift in Sources */,
 				DE1E418D29FE9ADA0057C4C3 /* PostListPageView.swift in Sources */,
 				DE1E418B29FE9ACF0057C4C3 /* PostListPageViewModel.swift in Sources */,
-				DE2F70BF2A00149400F4F263 /* PostIDService.swift in Sources */,
+				DE2F70BF2A00149400F4F263 /* PersistPostIDService.swift in Sources */,
 				DE09635629FEEBE200716928 /* User+CoreDataProperties.swift in Sources */,
 				DE8FAE3329FEAA95009D0469 /* NetworkServices.swift in Sources */,
 				DE09636929FEF2E800716928 /* PostListItemDAO.swift in Sources */,
