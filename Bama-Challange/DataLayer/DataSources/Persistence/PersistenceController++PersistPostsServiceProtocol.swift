@@ -10,7 +10,7 @@ import Dependencies
 
 extension PersistenceController: PersistPostsServiceProtocol {
 
-    func persistPosts(items: [PostListItem]) async throws {
+    public func persistPosts(items: [PostListItem]) async throws {
         try await viewContext.perform(schedule: .enqueued) {
             let managedObjectModels = try items.map {
                 try PostListItemDAO().translate($0, context: self.viewContext)

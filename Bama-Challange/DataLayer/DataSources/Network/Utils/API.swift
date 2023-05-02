@@ -62,7 +62,7 @@ internal struct KeyValue {
 }
 
 @resultBuilder
-struct BodyBuilder {
+internal struct BodyBuilder {
     static func buildBlock(_ components: KeyValue...) -> [String: Any] {
         components.reduce(into: [String: Any]()) { partialResult, keyValue in
             partialResult[keyValue.key] = keyValue.value
