@@ -7,4 +7,5 @@
 
 public protocol FetchPostsServiceProtocol {
     func fetchPosts() async throws -> [PostListItem]
+    func fetchPost(with id: Int32) async throws -> PostListItem
 }
