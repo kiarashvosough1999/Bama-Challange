@@ -22,6 +22,14 @@
 		DE1E418B29FE9ACF0057C4C3 /* PostListPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1E418A29FE9ACF0057C4C3 /* PostListPageViewModel.swift */; };
 		DE1E418D29FE9ADA0057C4C3 /* PostListPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1E418C29FE9ADA0057C4C3 /* PostListPageView.swift */; };
 		DE1E419029FE9B930057C4C3 /* PostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1E418F29FE9B930057C4C3 /* PostView.swift */; };
+		DE2F70AF2A0010FF00F4F263 /* TitleValueFormRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2F70AE2A0010FF00F4F263 /* TitleValueFormRow.swift */; };
+		DE2F70B22A00116B00F4F263 /* RoundedBorderModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2F70B12A00116B00F4F263 /* RoundedBorderModifier.swift */; };
+		DE2F70B42A0011D800F4F263 /* OpacityAnimationModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2F70B32A0011D800F4F263 /* OpacityAnimationModifier.swift */; };
+		DE2F70B62A00124B00F4F263 /* TitleTextModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2F70B52A00124B00F4F263 /* TitleTextModifier.swift */; };
+		DE2F70B82A00128600F4F263 /* BodyTextModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2F70B72A00128600F4F263 /* BodyTextModifier.swift */; };
+		DE2F70BD2A00142700F4F263 /* MessageQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2F70BC2A00142700F4F263 /* MessageQueue.swift */; };
+		DE2F70BF2A00149400F4F263 /* PostIDService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2F70BE2A00149400F4F263 /* PostIDService.swift */; };
+		DE2F70C12A0014FA00F4F263 /* MessageQueue++PersistPostIDServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2F70C02A0014FA00F4F263 /* MessageQueue++PersistPostIDServiceProtocol.swift */; };
 		DE5B142529FE5C4500C56594 /* Bama_ChallangeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5B142429FE5C4500C56594 /* Bama_ChallangeApp.swift */; };
 		DE5B142729FE5C4500C56594 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5B142629FE5C4500C56594 /* Persistence.swift */; };
 		DE5B142A29FE5C4500C56594 /* Bama_Challange.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DE5B142829FE5C4500C56594 /* Bama_Challange.xcdatamodeld */; };
@@ -42,6 +50,8 @@
 		DE8FAE4029FEAAA7009D0469 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8FAE3A29FEAAA7009D0469 /* API.swift */; };
 		DE8FAE4129FEAAA7009D0469 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8FAE3B29FEAAA7009D0469 /* NetworkError.swift */; };
 		DE8FAE4329FEAC34009D0469 /* FetchPostsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8FAE4229FEAC34009D0469 /* FetchPostsRepository.swift */; };
+		DEE1D31129FFB7EB00B4BBC7 /* PostDetailPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE1D31029FFB7EB00B4BBC7 /* PostDetailPageViewModel.swift */; };
+		DEE1D31329FFB7F200B4BBC7 /* PostDetailPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE1D31229FFB7F200B4BBC7 /* PostDetailPageView.swift */; };
 		DEEE95C129FE69C40061177C /* TabPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEEE95C029FE69C40061177C /* TabPage.swift */; };
 /* End PBXBuildFile section */
 
@@ -78,6 +88,14 @@
 		DE1E418A29FE9ACF0057C4C3 /* PostListPageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListPageViewModel.swift; sourceTree = "<group>"; };
 		DE1E418C29FE9ADA0057C4C3 /* PostListPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListPageView.swift; sourceTree = "<group>"; };
 		DE1E418F29FE9B930057C4C3 /* PostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostView.swift; sourceTree = "<group>"; };
+		DE2F70AE2A0010FF00F4F263 /* TitleValueFormRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleValueFormRow.swift; sourceTree = "<group>"; };
+		DE2F70B12A00116B00F4F263 /* RoundedBorderModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedBorderModifier.swift; sourceTree = "<group>"; };
+		DE2F70B32A0011D800F4F263 /* OpacityAnimationModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpacityAnimationModifier.swift; sourceTree = "<group>"; };
+		DE2F70B52A00124B00F4F263 /* TitleTextModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleTextModifier.swift; sourceTree = "<group>"; };
+		DE2F70B72A00128600F4F263 /* BodyTextModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodyTextModifier.swift; sourceTree = "<group>"; };
+		DE2F70BC2A00142700F4F263 /* MessageQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageQueue.swift; sourceTree = "<group>"; };
+		DE2F70BE2A00149400F4F263 /* PostIDService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostIDService.swift; sourceTree = "<group>"; };
+		DE2F70C02A0014FA00F4F263 /* MessageQueue++PersistPostIDServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MessageQueue++PersistPostIDServiceProtocol.swift"; sourceTree = "<group>"; };
 		DE5B142129FE5C4500C56594 /* Bama-Challange.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bama-Challange.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE5B142429FE5C4500C56594 /* Bama_ChallangeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bama_ChallangeApp.swift; sourceTree = "<group>"; };
 		DE5B142629FE5C4500C56594 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
@@ -101,6 +119,8 @@
 		DE8FAE3A29FEAAA7009D0469 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		DE8FAE3B29FEAAA7009D0469 /* NetworkError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		DE8FAE4229FEAC34009D0469 /* FetchPostsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchPostsRepository.swift; sourceTree = "<group>"; };
+		DEE1D31029FFB7EB00B4BBC7 /* PostDetailPageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailPageViewModel.swift; sourceTree = "<group>"; };
+		DEE1D31229FFB7F200B4BBC7 /* PostDetailPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailPageView.swift; sourceTree = "<group>"; };
 		DEEE95C029FE69C40061177C /* TabPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabPage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -144,6 +164,7 @@
 		DE09634C29FEE99D00716928 /* DataSources */ = {
 			isa = PBXGroup;
 			children = (
+				DE2F70BB2A00141200F4F263 /* MessageQueue */,
 				DEEE95BD29FE66400061177C /* Network */,
 				DEEE95BE29FE66820061177C /* Persistence */,
 			);
@@ -155,6 +176,7 @@
 			children = (
 				DE09635C29FEED1600716928 /* FetchPostsServiceProtocol.swift */,
 				DE09636A29FEF36B00716928 /* PersistPostsServiceProtocol.swift */,
+				DE2F70BE2A00149400F4F263 /* PostIDService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -191,8 +213,48 @@
 			isa = PBXGroup;
 			children = (
 				DE1E418F29FE9B930057C4C3 /* PostView.swift */,
+				DE2F70AE2A0010FF00F4F263 /* TitleValueFormRow.swift */,
 			);
 			path = SubViews;
+			sourceTree = "<group>";
+		};
+		DE2F70B02A00114B00F4F263 /* Modifiers */ = {
+			isa = PBXGroup;
+			children = (
+				DE2F70B12A00116B00F4F263 /* RoundedBorderModifier.swift */,
+				DE2F70B32A0011D800F4F263 /* OpacityAnimationModifier.swift */,
+				DE2F70B52A00124B00F4F263 /* TitleTextModifier.swift */,
+				DE2F70B72A00128600F4F263 /* BodyTextModifier.swift */,
+			);
+			path = Modifiers;
+			sourceTree = "<group>";
+		};
+		DE2F70B92A0012E400F4F263 /* Pages */ = {
+			isa = PBXGroup;
+			children = (
+				DEE1D30F29FFB7DA00B4BBC7 /* PostDetailPage */,
+				DE1E418929FE9AB70057C4C3 /* PostListPage */,
+				DEEE95BF29FE69AE0061177C /* TabPage */,
+			);
+			path = Pages;
+			sourceTree = "<group>";
+		};
+		DE2F70BA2A0012EE00F4F263 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				DE2F70B02A00114B00F4F263 /* Modifiers */,
+				DE1E418E29FE9B6E0057C4C3 /* SubViews */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		DE2F70BB2A00141200F4F263 /* MessageQueue */ = {
+			isa = PBXGroup;
+			children = (
+				DE2F70BC2A00142700F4F263 /* MessageQueue.swift */,
+				DE2F70C02A0014FA00F4F263 /* MessageQueue++PersistPostIDServiceProtocol.swift */,
+			);
+			path = MessageQueue;
 			sourceTree = "<group>";
 		};
 		DE5B141829FE5C4500C56594 = {
@@ -277,6 +339,15 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		DEE1D30F29FFB7DA00B4BBC7 /* PostDetailPage */ = {
+			isa = PBXGroup;
+			children = (
+				DEE1D31029FFB7EB00B4BBC7 /* PostDetailPageViewModel.swift */,
+				DEE1D31229FFB7F200B4BBC7 /* PostDetailPageView.swift */,
+			);
+			path = PostDetailPage;
+			sourceTree = "<group>";
+		};
 		DEEE95B929FE66010061177C /* Entities */ = {
 			isa = PBXGroup;
 			children = (
@@ -288,10 +359,9 @@
 		DEEE95BA29FE66110061177C /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				DE2F70BA2A0012EE00F4F263 /* Components */,
+				DE2F70B92A0012E400F4F263 /* Pages */,
 				DE8FAE2E29FEA6F4009D0469 /* Navigation */,
-				DE1E418E29FE9B6E0057C4C3 /* SubViews */,
-				DE1E418929FE9AB70057C4C3 /* PostListPage */,
-				DEEE95BF29FE69AE0061177C /* TabPage */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -483,6 +553,8 @@
 				DE5B142529FE5C4500C56594 /* Bama_ChallangeApp.swift in Sources */,
 				DE09636D29FEF37F00716928 /* PersistenceController++PersistPostsServiceProtocol.swift in Sources */,
 				DE09636229FEEEF100716928 /* DAO.swift in Sources */,
+				DEE1D31329FFB7F200B4BBC7 /* PostDetailPageView.swift in Sources */,
+				DE2F70B82A00128600F4F263 /* BodyTextModifier.swift in Sources */,
 				DE5B142729FE5C4500C56594 /* Persistence.swift in Sources */,
 				DE09636029FEEE0D00716928 /* PersistenceController++FetchPostsServiceProtocol.swift in Sources */,
 				DE09635D29FEED1600716928 /* FetchPostsServiceProtocol.swift in Sources */,
@@ -491,24 +563,32 @@
 				DE8FAE2729FEA0FC009D0469 /* FetchPostsUseCase.swift in Sources */,
 				DE5B142A29FE5C4500C56594 /* Bama_Challange.xcdatamodeld in Sources */,
 				DEEE95C129FE69C40061177C /* TabPage.swift in Sources */,
+				DE2F70BD2A00142700F4F263 /* MessageQueue.swift in Sources */,
 				DE8FAE2C29FEA45A009D0469 /* PostListItem.swift in Sources */,
 				DE8FAE3F29FEAAA7009D0469 /* HTTPMethod.swift in Sources */,
 				DE8FAE4129FEAAA7009D0469 /* NetworkError.swift in Sources */,
+				DEE1D31129FFB7EB00B4BBC7 /* PostDetailPageViewModel.swift in Sources */,
 				DE8FAE3D29FEAAA7009D0469 /* GateWays.swift in Sources */,
 				DE09636529FEF23900716928 /* ListItem+CoreDataClass.swift in Sources */,
 				DE09636629FEF23900716928 /* ListItem+CoreDataProperties.swift in Sources */,
 				DE8FAE4329FEAC34009D0469 /* FetchPostsRepository.swift in Sources */,
+				DE2F70B42A0011D800F4F263 /* OpacityAnimationModifier.swift in Sources */,
 				DE09635829FEEC6400716928 /* URLSession++APITask.swift in Sources */,
+				DE2F70B22A00116B00F4F263 /* RoundedBorderModifier.swift in Sources */,
 				DE8FAE2529FE9F45009D0469 /* TapPostItemUseCase.swift in Sources */,
 				DE8FAE4029FEAAA7009D0469 /* API.swift in Sources */,
 				DE8FAE3029FEA715009D0469 /* NavigationService.swift in Sources */,
 				DE1E418D29FE9ADA0057C4C3 /* PostListPageView.swift in Sources */,
 				DE1E418B29FE9ACF0057C4C3 /* PostListPageViewModel.swift in Sources */,
+				DE2F70BF2A00149400F4F263 /* PostIDService.swift in Sources */,
 				DE09635629FEEBE200716928 /* User+CoreDataProperties.swift in Sources */,
 				DE8FAE3329FEAA95009D0469 /* NetworkServices.swift in Sources */,
 				DE09636929FEF2E800716928 /* PostListItemDAO.swift in Sources */,
+				DE2F70B62A00124B00F4F263 /* TitleTextModifier.swift in Sources */,
+				DE2F70C12A0014FA00F4F263 /* MessageQueue++PersistPostIDServiceProtocol.swift in Sources */,
 				DE1E419029FE9B930057C4C3 /* PostView.swift in Sources */,
 				DE09635429FEEBE200716928 /* User+CoreDataClass.swift in Sources */,
+				DE2F70AF2A0010FF00F4F263 /* TitleValueFormRow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
