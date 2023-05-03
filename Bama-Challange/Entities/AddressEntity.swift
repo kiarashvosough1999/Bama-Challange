@@ -5,7 +5,8 @@
 //  Created by Kiarash Vosough on 5/2/23.
 //
 
-public struct AddressEntity: Hashable {
+public struct AddressEntity: Hashable, Codable {
+
     public let street: String
     public let suite: String
     public let city: String

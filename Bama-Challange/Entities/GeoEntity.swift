@@ -7,7 +7,8 @@
 
 import Foundation
 
-public struct GeoEntity: Hashable {
+public struct GeoEntity: Hashable, Codable, Sendable {
+
     public let lat: String
     public let lng: String
 

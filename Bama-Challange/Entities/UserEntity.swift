@@ -1,13 +1,13 @@
 //
-//  UserModel.swift
+//  UserEntity.swift
 //  Bama-Challange
 //
 //  Created by Kiarash Vosough on 5/2/23.
 //
 
-public struct UserEntity: Hashable {
+public struct UserEntity: Hashable, Codable {
 
-    public let id: Int
+    public let id: Int32
     public let name: String
     public let username: String
     public let email: String
@@ -17,7 +17,7 @@ public struct UserEntity: Hashable {
     public let company: CompanyEntity
 
     public init(
-        id: Int,
+        id: Int32,
         name: String,
         username: String,
         email: String,
