@@ -7,6 +7,6 @@
 
 import Foundation
 
-public protocol FetchUserListService {
-    func fetchUserList()
+public protocol FetchUserListServiceProtocol {
+    func fetchUserList() async throws -> [UserEntity]
 }
