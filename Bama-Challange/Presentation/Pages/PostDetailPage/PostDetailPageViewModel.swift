@@ -20,6 +20,7 @@ internal final class PostDetailPageViewModel: ObservableObject {
         }
     }
 
+    @MainActor
     private func load() async {
         if let id = persistPostIdMessageBrokerService.retreivePostId() {
             do {
