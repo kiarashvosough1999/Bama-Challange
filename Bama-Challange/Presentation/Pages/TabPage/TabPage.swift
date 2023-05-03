@@ -22,19 +22,20 @@ struct TabPage: View {
                 .tabItem {
                     Label("Posts", systemImage: "list.bullet.rectangle.portrait")
                 }
+                .padding(.top, 30)
 
-            Color
-                .blue
+            UserListPageView()
                 .tabItem {
                     Label("Users", systemImage: "person.circle")
                 }
         }
-        .navigationTitle(selectedTab == .posts ? "Post List" : "Users")
     }
 }
 
+#if DEBUG
 struct TabPage_Previews: PreviewProvider {
     static var previews: some View {
         TabPage()
     }
 }
+#endif
