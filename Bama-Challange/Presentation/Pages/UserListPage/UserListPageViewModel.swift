@@ -10,13 +10,13 @@ import Dependencies
 
 internal final class UserListPageViewModel: ObservableObject {
 
-    @Published internal var users: [UserModel] = []
+    @Published internal var users: PageLoadState<[UserModel]> = .loading
     @Dependency(\.fetchUsersRepository) private var fetchUsersRepository
 
     @MainActor
     internal func load() async {
         do {
-            self.users = try await fetchUsersRepository.fetchUsers().map { user in
+            let loadedUsers = try await fetchUsersRepository.fetchUsers().map { user in
                 UserModel(
                     id: user.id,
                     name: user.name,
@@ -38,8 +38,9 @@ internal final class UserListPageViewModel: ObservableObject {
                     )
                 )
             }
+            self.users = .loaded(loadedUsers)
         } catch {
-            
+            self.users = .failed(message: "Failed To Load")
         }
     }
 }

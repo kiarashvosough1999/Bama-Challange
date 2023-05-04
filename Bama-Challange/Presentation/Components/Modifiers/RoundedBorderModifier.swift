@@ -9,19 +9,28 @@ import SwiftUI
 
 extension View {
 
-    func roundBordered() -> some View {
-        self.modifier(RoundedBorderModifier())
+    func roundBordered(corderColor: Color = .blue) -> some View {
+        self.modifier(RoundedBorderModifier(corderColor: corderColor))
     }
 }
 
 private struct RoundedBorderModifier: ViewModifier {
 
+    private let corderColor: Color
+
+    init(corderColor: Color) {
+        self.corderColor = corderColor
+    }
+    
     func body(content: Content) -> some View {
         content
             .overlay {
-                RoundedRectangle(cornerRadius: 10)
-                    .stroke(lineWidth: 1)
-                    .foregroundColor(.blue)
+                ZStack {
+                    Color.gray.opacity(0.05)
+                    RoundedRectangle(cornerRadius: 10)
+                        .stroke(lineWidth: 1)
+                        .foregroundColor(corderColor)
+                }
             }
     }
 }
@@ -30,7 +39,8 @@ private struct RoundedBorderModifier: ViewModifier {
 struct RoundedBorderModifier_Previews: PreviewProvider {
     static var previews: some View {
         Text("Hello, world!")
-            .modifier(RoundedBorderModifier())
+            .padding()
+            .modifier(RoundedBorderModifier(corderColor: .blue))
     }
 }
 #endif

@@ -7,22 +7,26 @@
 
 import SwiftUI
 
-struct UserListPageView: View {
+public struct UserListPageView: View {
 
     @StateObject private var viewModel = UserListPageViewModel()
 
-    var body: some View {
-        Form {
-            ForEach(viewModel.users) { user in
-                UserListItemView(user: user)
-                    .padding(.all, 10)
+    public var body: some View {
+        WithLoadingState(state: viewModel.users) { users in
+            Form {
+                ForEach(users) { user in
+                    UserListItemView(user: user)
+                        .padding(.all, 10)
+                }
             }
+        }
+        .onRetry {
+            await viewModel.load()
         }
         .task {
-            Task {
-                await viewModel.load()
-            }
+            await viewModel.load()
         }
+        .fixEmptyTabView()
     }
 }
 
