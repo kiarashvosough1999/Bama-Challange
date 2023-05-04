@@ -18,6 +18,8 @@ public protocol TapPostItemUseCaseProtocol {
 public struct TapPostItemUseCase {
     @Dependency(\.navigationService) private var navigationService
     @Dependency(\.persistPostIdMessageQueueService) private var persistPostIdMessageBrokerService
+
+    public init() {}
 }
 
 extension TapPostItemUseCase: TapPostItemUseCaseProtocol {

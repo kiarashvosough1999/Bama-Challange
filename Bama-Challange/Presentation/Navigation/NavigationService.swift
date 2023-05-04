@@ -75,6 +75,6 @@ extension DependencyValues {
 
     internal enum NavigationServiceProtocolKey: DependencyKey {
         static let liveValue: NavigationServiceProtocol = NavigationService.shared
-        static var testValue: NavigationServiceProtocol  = NavigationService.shared
+        static let testValue: NavigationServiceProtocol  = NavigationService.shared
     }
 }

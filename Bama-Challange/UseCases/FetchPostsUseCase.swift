@@ -24,12 +24,7 @@ public struct FetchPostsUseCase {
 extension FetchPostsUseCase: FetchPostsUseCaseProtocol {
 
     public func fetch() async throws -> [PostListItem] {
-        do {
-            return try await fetchPostsRepository.fetchPosts()
-        } catch {
-            
-        }
-        return []
+        return try await fetchPostsRepository.fetchPosts()
     }
 
     public func fetch(with id: Int32) async throws -> PostListItem {
