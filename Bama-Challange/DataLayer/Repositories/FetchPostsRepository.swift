@@ -21,6 +21,8 @@ public struct FetchPostsRepository {
     @Dependency(\.fetchPostsRemoteService) private var fetchPostsRemoteService
     @Dependency(\.fetchPostsDBService) private var fetchPostsDBService
     @Dependency(\.persistPostsDBService) private var persistPostsDBService
+
+    public init() {}
 }
 
 extension FetchPostsRepository: FetchPostsRepositoryProtocol {
@@ -29,9 +31,7 @@ extension FetchPostsRepository: FetchPostsRepositoryProtocol {
         if let results = try? await fetchPostsDBService.fetchPosts(), results.isEmpty == false {
             return results
         } else if let results = try? await fetchPostsRemoteService.fetchPosts(), results.isEmpty == false {
-            Task {
-                try? await persistPostsDBService.persistPosts(items: results)
-            }
+            try? await persistPostsDBService.persistPosts(items: results)
             return results
         } else {
             return []
