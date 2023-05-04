@@ -85,6 +85,7 @@ extension DependencyValues {
     }
     
     private enum FetchPostsUseCaseKey: DependencyKey {
+        static let testValue: FetchPostsUseCaseProtocol = FetchPostsUseCasePreview()
         static let liveValue: FetchPostsUseCaseProtocol = FetchPostsUseCase()
         static let previewValue: FetchPostsUseCaseProtocol = FetchPostsUseCasePreview()
     }
