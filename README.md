@@ -30,4 +30,4 @@ This reposiroty contains a challange for Bama incoporation. The application show
 
 ## Flow
 
-
+![](https://github.com/kiarashvosough1999/Bama-Challange/blob/master/bama.jpg)
