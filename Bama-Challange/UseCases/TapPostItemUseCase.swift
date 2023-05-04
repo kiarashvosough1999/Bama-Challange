@@ -40,6 +40,7 @@ extension DependencyValues {
     }
     
     private enum TapPostItemUseCaseKey: DependencyKey {
+        static let testValue: TapPostItemUseCaseProtocol = TapPostItemUseCase()
         static let liveValue: TapPostItemUseCaseProtocol = TapPostItemUseCase()
     }
 }
