@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct PostListItem: Codable {
+public struct PostListItem: Codable, Equatable {
 
     public var id: Int32
     public var title: String
