@@ -12,11 +12,9 @@ public struct PostListPageView: View {
     @StateObject private var viewModel = PostListPageViewModel()
 
     public var body: some View {
-
         ScrollView {
             LazyVStack {
                 ForEach(viewModel.items) { item in
-                    let index = viewModel.items.firstIndex(of: item) ?? 0
                     PostView(
                         title: item.title,
                         bodyText: item.body

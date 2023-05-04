@@ -1,17 +1,38 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="21754" systemVersion="22E261" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="CDAddressEntity" representedClassName="CDAddressEntity" syncable="YES">
+        <attribute name="city" attributeType="String" defaultValueString=""/>
+        <attribute name="street" attributeType="String" defaultValueString=""/>
+        <attribute name="suite" attributeType="String" defaultValueString=""/>
+        <attribute name="zipcode" attributeType="String" defaultValueString=""/>
+        <relationship name="geo" maxCount="1" deletionRule="Cascade" destinationEntity="CDGeoEntity" inverseName="address" inverseEntity="CDGeoEntity"/>
+        <relationship name="user" toMany="YES" deletionRule="Nullify" destinationEntity="CDUserEntity" inverseName="address" inverseEntity="CDUserEntity"/>
+    </entity>
+    <entity name="CDCompanyEntity" representedClassName="CDCompanyEntity" syncable="YES">
+        <attribute name="bs" attributeType="String" defaultValueString=""/>
+        <attribute name="catchPhrase" attributeType="String" defaultValueString=""/>
+        <attribute name="name" attributeType="String" defaultValueString=""/>
+        <relationship name="user" toMany="YES" deletionRule="Nullify" destinationEntity="CDUserEntity" inverseName="company" inverseEntity="CDUserEntity"/>
+    </entity>
+    <entity name="CDGeoEntity" representedClassName="CDGeoEntity" syncable="YES">
+        <attribute name="lat" optional="YES" attributeType="String" defaultValueString=""/>
+        <attribute name="lng" optional="YES" attributeType="String" defaultValueString=""/>
+        <relationship name="address" toMany="YES" deletionRule="Nullify" destinationEntity="CDAddressEntity" inverseName="geo" inverseEntity="CDAddressEntity"/>
+    </entity>
+    <entity name="CDUserEntity" representedClassName="CDUserEntity" syncable="YES">
+        <attribute name="email" attributeType="String" defaultValueString=""/>
+        <attribute name="id" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="name" attributeType="String" defaultValueString=""/>
+        <attribute name="phone" attributeType="String" defaultValueString=""/>
+        <attribute name="username" attributeType="String" defaultValueString=""/>
+        <attribute name="website" attributeType="String" defaultValueString=""/>
+        <relationship name="address" maxCount="1" deletionRule="Nullify" destinationEntity="CDAddressEntity" inverseName="user" inverseEntity="CDAddressEntity"/>
+        <relationship name="company" maxCount="1" deletionRule="Nullify" destinationEntity="CDCompanyEntity" inverseName="user" inverseEntity="CDCompanyEntity"/>
+    </entity>
     <entity name="ListItem" representedClassName="ListItem" syncable="YES">
         <attribute name="body" attributeType="String" defaultValueString=""/>
         <attribute name="id" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="title" attributeType="String" defaultValueString=""/>
         <attribute name="userId" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
-    </entity>
-    <entity name="User" representedClassName="User" syncable="YES">
-        <attribute name="email" optional="YES" attributeType="String"/>
-        <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
-        <attribute name="name" optional="YES" attributeType="String"/>
-        <attribute name="phone" optional="YES" attributeType="String"/>
-        <attribute name="username" optional="YES" attributeType="String"/>
-        <attribute name="website" optional="YES" attributeType="String"/>
     </entity>
 </model>
