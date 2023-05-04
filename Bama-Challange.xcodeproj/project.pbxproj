@@ -17,6 +17,14 @@
 		DE09636929FEF2E800716928 /* PostListItemDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE09636829FEF2E800716928 /* PostListItemDAO.swift */; };
 		DE09636B29FEF36B00716928 /* PersistPostsServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE09636A29FEF36B00716928 /* PersistPostsServiceProtocol.swift */; };
 		DE09636D29FEF37F00716928 /* PersistenceController++PersistPostsServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE09636C29FEF37F00716928 /* PersistenceController++PersistPostsServiceProtocol.swift */; };
+		DE19CFD82A042071006A7BFA /* PostListPageViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE19CFD72A042071006A7BFA /* PostListPageViewModelTests.swift */; };
+		DE19CFDB2A04212C006A7BFA /* FetchPostsUseCaseStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE19CFDA2A04212C006A7BFA /* FetchPostsUseCaseStub.swift */; };
+		DE19CFE02A0421B5006A7BFA /* MockActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE19CFDD2A0421B5006A7BFA /* MockActions.swift */; };
+		DE19CFE22A0421B5006A7BFA /* Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE19CFDF2A0421B5006A7BFA /* Mock.swift */; };
+		DE19CFE52A042301006A7BFA /* posts.json in Resources */ = {isa = PBXBuildFile; fileRef = DE19CFE42A042301006A7BFA /* posts.json */; };
+		DE19CFE82A042340006A7BFA /* JSONLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE19CFE72A042340006A7BFA /* JSONLoader.swift */; };
+		DE19CFEA2A042B71006A7BFA /* TapPostItemUseCaseStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE19CFE92A042B71006A7BFA /* TapPostItemUseCaseStub.swift */; };
+		DE19CFED2A042C2E006A7BFA /* String++Mocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE19CFEC2A042C2E006A7BFA /* String++Mocks.swift */; };
 		DE1E418B29FE9ACF0057C4C3 /* PostListPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1E418A29FE9ACF0057C4C3 /* PostListPageViewModel.swift */; };
 		DE1E418D29FE9ADA0057C4C3 /* PostListPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1E418C29FE9ADA0057C4C3 /* PostListPageView.swift */; };
 		DE1E419029FE9B930057C4C3 /* PostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1E418F29FE9B930057C4C3 /* PostView.swift */; };
@@ -116,6 +124,14 @@
 		DE09636829FEF2E800716928 /* PostListItemDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListItemDAO.swift; sourceTree = "<group>"; };
 		DE09636A29FEF36B00716928 /* PersistPostsServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistPostsServiceProtocol.swift; sourceTree = "<group>"; };
 		DE09636C29FEF37F00716928 /* PersistenceController++PersistPostsServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PersistenceController++PersistPostsServiceProtocol.swift"; sourceTree = "<group>"; };
+		DE19CFD72A042071006A7BFA /* PostListPageViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListPageViewModelTests.swift; sourceTree = "<group>"; };
+		DE19CFDA2A04212C006A7BFA /* FetchPostsUseCaseStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchPostsUseCaseStub.swift; sourceTree = "<group>"; };
+		DE19CFDD2A0421B5006A7BFA /* MockActions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockActions.swift; sourceTree = "<group>"; };
+		DE19CFDF2A0421B5006A7BFA /* Mock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mock.swift; sourceTree = "<group>"; };
+		DE19CFE42A042301006A7BFA /* posts.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = posts.json; sourceTree = "<group>"; };
+		DE19CFE72A042340006A7BFA /* JSONLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONLoader.swift; sourceTree = "<group>"; };
+		DE19CFE92A042B71006A7BFA /* TapPostItemUseCaseStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapPostItemUseCaseStub.swift; sourceTree = "<group>"; };
+		DE19CFEC2A042C2E006A7BFA /* String++Mocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String++Mocks.swift"; sourceTree = "<group>"; };
 		DE1E418A29FE9ACF0057C4C3 /* PostListPageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListPageViewModel.swift; sourceTree = "<group>"; };
 		DE1E418C29FE9ADA0057C4C3 /* PostListPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListPageView.swift; sourceTree = "<group>"; };
 		DE1E418F29FE9B930057C4C3 /* PostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostView.swift; sourceTree = "<group>"; };
@@ -281,6 +297,49 @@
 			path = DAOs;
 			sourceTree = "<group>";
 		};
+		DE19CFD62A042064006A7BFA /* ViewModelTests */ = {
+			isa = PBXGroup;
+			children = (
+				DE19CFD72A042071006A7BFA /* PostListPageViewModelTests.swift */,
+			);
+			path = ViewModelTests;
+			sourceTree = "<group>";
+		};
+		DE19CFD92A042120006A7BFA /* Stubs */ = {
+			isa = PBXGroup;
+			children = (
+				DE19CFDA2A04212C006A7BFA /* FetchPostsUseCaseStub.swift */,
+				DE19CFE92A042B71006A7BFA /* TapPostItemUseCaseStub.swift */,
+			);
+			path = Stubs;
+			sourceTree = "<group>";
+		};
+		DE19CFDC2A04219B006A7BFA /* MockHelper */ = {
+			isa = PBXGroup;
+			children = (
+				DE19CFDF2A0421B5006A7BFA /* Mock.swift */,
+				DE19CFDD2A0421B5006A7BFA /* MockActions.swift */,
+			);
+			path = MockHelper;
+			sourceTree = "<group>";
+		};
+		DE19CFE32A0422F2006A7BFA /* MockJSON */ = {
+			isa = PBXGroup;
+			children = (
+				DE19CFE42A042301006A7BFA /* posts.json */,
+				DE19CFE72A042340006A7BFA /* JSONLoader.swift */,
+			);
+			path = MockJSON;
+			sourceTree = "<group>";
+		};
+		DE19CFEB2A042C20006A7BFA /* MockPrimitives */ = {
+			isa = PBXGroup;
+			children = (
+				DE19CFEC2A042C2E006A7BFA /* String++Mocks.swift */,
+			);
+			path = MockPrimitives;
+			sourceTree = "<group>";
+		};
 		DE1E418929FE9AB70057C4C3 /* PostListPage */ = {
 			isa = PBXGroup;
 			children = (
@@ -391,6 +450,11 @@
 		DE5B143A29FE5C4600C56594 /* Bama-ChallangeTests */ = {
 			isa = PBXGroup;
 			children = (
+				DE19CFEB2A042C20006A7BFA /* MockPrimitives */,
+				DE19CFE32A0422F2006A7BFA /* MockJSON */,
+				DE19CFDC2A04219B006A7BFA /* MockHelper */,
+				DE19CFD92A042120006A7BFA /* Stubs */,
+				DE19CFD62A042064006A7BFA /* ViewModelTests */,
 				DE5B143B29FE5C4600C56594 /* Bama_ChallangeTests.swift */,
 			);
 			path = "Bama-ChallangeTests";
@@ -639,6 +703,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE19CFE52A042301006A7BFA /* posts.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -736,7 +801,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE19CFED2A042C2E006A7BFA /* String++Mocks.swift in Sources */,
+				DE19CFD82A042071006A7BFA /* PostListPageViewModelTests.swift in Sources */,
 				DE5B143C29FE5C4600C56594 /* Bama_ChallangeTests.swift in Sources */,
+				DE19CFE82A042340006A7BFA /* JSONLoader.swift in Sources */,
+				DE19CFEA2A042B71006A7BFA /* TapPostItemUseCaseStub.swift in Sources */,
+				DE19CFDB2A04212C006A7BFA /* FetchPostsUseCaseStub.swift in Sources */,
+				DE19CFE02A0421B5006A7BFA /* MockActions.swift in Sources */,
+				DE19CFE22A0421B5006A7BFA /* Mock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
