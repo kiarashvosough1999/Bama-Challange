@@ -33,6 +33,7 @@
 		DE19CFFC2A04355B006A7BFA /* PersistPostsServiceStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE19CFFB2A04355B006A7BFA /* PersistPostsServiceStub.swift */; };
 		DE19CFFE2A04377E006A7BFA /* MockError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE19CFFD2A04377E006A7BFA /* MockError.swift */; };
 		DE19D0012A043A42006A7BFA /* AsyncAssertion.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE19D0002A043A42006A7BFA /* AsyncAssertion.swift */; };
+		DE19D01E2A045560006A7BFA /* AccessibilityIdentfiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE19D01D2A045560006A7BFA /* AccessibilityIdentfiable.swift */; };
 		DE1E418B29FE9ACF0057C4C3 /* PostListPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1E418A29FE9ACF0057C4C3 /* PostListPageViewModel.swift */; };
 		DE1E418D29FE9ADA0057C4C3 /* PostListPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1E418C29FE9ADA0057C4C3 /* PostListPageView.swift */; };
 		DE1E419029FE9B930057C4C3 /* PostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1E418F29FE9B930057C4C3 /* PostView.swift */; };
@@ -149,6 +150,7 @@
 		DE19CFFB2A04355B006A7BFA /* PersistPostsServiceStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistPostsServiceStub.swift; sourceTree = "<group>"; };
 		DE19CFFD2A04377E006A7BFA /* MockError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockError.swift; sourceTree = "<group>"; };
 		DE19D0002A043A42006A7BFA /* AsyncAssertion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncAssertion.swift; sourceTree = "<group>"; };
+		DE19D01D2A045560006A7BFA /* AccessibilityIdentfiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibilityIdentfiable.swift; sourceTree = "<group>"; };
 		DE1E418A29FE9ACF0057C4C3 /* PostListPageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListPageViewModel.swift; sourceTree = "<group>"; };
 		DE1E418C29FE9ADA0057C4C3 /* PostListPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListPageView.swift; sourceTree = "<group>"; };
 		DE1E418F29FE9B930057C4C3 /* PostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostView.swift; sourceTree = "<group>"; };
@@ -386,6 +388,14 @@
 			path = XCExtensions;
 			sourceTree = "<group>";
 		};
+		DE19D01C2A04553D006A7BFA /* Accessability */ = {
+			isa = PBXGroup;
+			children = (
+				DE19D01D2A045560006A7BFA /* AccessibilityIdentfiable.swift */,
+			);
+			path = Accessability;
+			sourceTree = "<group>";
+		};
 		DE1E418929FE9AB70057C4C3 /* PostListPage */ = {
 			isa = PBXGroup;
 			children = (
@@ -573,6 +583,7 @@
 		DEEE95BA29FE66110061177C /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				DE19D01C2A04553D006A7BFA /* Accessability */,
 				DE2F70BA2A0012EE00F4F263 /* Components */,
 				DE2F70B92A0012E400F4F263 /* Pages */,
 				DE8FAE2E29FEA6F4009D0469 /* Navigation */,
@@ -833,6 +844,7 @@
 				DEBCBD012A02C70A00F1120B /* CDCompanyEntity+CoreDataClass.swift in Sources */,
 				DE2F70BF2A00149400F4F263 /* PersistPostIDService.swift in Sources */,
 				DEBCBCFE2A02C70A00F1120B /* CDAddressEntity+CoreDataProperties.swift in Sources */,
+				DE19D01E2A045560006A7BFA /* AccessibilityIdentfiable.swift in Sources */,
 				DEC4D4C42A0184A300834A80 /* NetworkServices++FetchUserListService.swift in Sources */,
 				DE8FAE3329FEAA95009D0469 /* NetworkServices.swift in Sources */,
 				DEBCBD212A02E08B00F1120B /* UserListPageView.swift in Sources */,
