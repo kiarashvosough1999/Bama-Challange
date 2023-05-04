@@ -20,7 +20,12 @@ jobs:
     - name: Build On ${{ matrix.name }}
       continue-on-error: false
       run: |
-        xcodebuild -scheme  Bama-Challange -destination '${{ matrix.destination }}' build
+        xcodebuild -scheme Bama-Challange -destination '${{ matrix.destination }}' build
+    
+    - name: Test On ${{ matrix.name }}
+      continue-on-error: false
+      run: |
+        xcodebuild -scheme Bama-Challange -destination '${{ matrix.destination }}' test
     
     strategy:
       fail-fast: false

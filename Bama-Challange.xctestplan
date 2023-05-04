@@ -1,0 +1,37 @@
+{
+  "configurations" : [
+    {
+      "id" : "F8480D6C-1ACF-4985-9A33-23E3E703D167",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:Bama-Challange.xcodeproj",
+      "identifier" : "DE5B142029FE5C4500C56594",
+      "name" : "Bama-Challange"
+    }
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:Bama-Challange.xcodeproj",
+        "identifier" : "DE5B143629FE5C4600C56594",
+        "name" : "Bama-ChallangeTests"
+      }
+    },
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:Bama-Challange.xcodeproj",
+        "identifier" : "DE5B144029FE5C4600C56594",
+        "name" : "Bama-ChallangeUITests"
+      }
+    }
+  ],
+  "version" : 1
+}
