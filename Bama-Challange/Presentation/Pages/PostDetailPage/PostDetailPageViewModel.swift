@@ -10,40 +10,35 @@ import Dependencies
 
 internal final class PostDetailPageViewModel: ObservableObject {
 
-    @Published internal var post: PostDetailModel?
+    @Published internal var post: PageLoadState<PostDetailModel> = .loading
     @Dependency(\.persistPostIdMessageQueueService) private var persistPostIdMessageBrokerService
     @Dependency(\.fetchPostsUseCase) private var fetchPostsUseCase
 
-    internal init() {
-        Task {
-            await self.load()
-        }
-    }
-
     @MainActor
-    private func load() async {
+    internal func load() async {
         if let id = persistPostIdMessageBrokerService.retreivePostId() {
             do {
                 let entity = try await fetchPostsUseCase.fetch(with: id)
 
-                self.post = PostDetailModel(
+                let loadedPost = PostDetailModel(
                     id: "\(entity.id)",
                     title: entity.title,
                     body: entity.body,
                     userId: "\(entity.userId)"
                 )
+                self.post = .loaded(loadedPost)
             } catch {
-                
+                self.post = .failed(message: "Failed To Load")
             }
         } else {
-            
+            self.post = .failed(message: "Invalid Post")
         }
     }
 }
 
 extension PostDetailPageViewModel {
 
-    internal struct PostDetailModel {
+    internal struct PostDetailModel: Equatable {
         internal var id: String
         internal var title: String
         internal var body: String

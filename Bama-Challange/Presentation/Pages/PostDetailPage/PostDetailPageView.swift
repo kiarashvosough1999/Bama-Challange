@@ -12,7 +12,7 @@ public struct PostDetailPageView: View {
     @StateObject private var viewModel: PostDetailPageViewModel = PostDetailPageViewModel()
 
     public var body: some View {
-        if let post = viewModel.post {
+        WithLoadingState(state: viewModel.post) { post in
             Form {
                 Section("Ids") {
                     TitleValueFormRow(title: "Id", value: post.id)
@@ -24,6 +24,12 @@ public struct PostDetailPageView: View {
                     TitleValueFormRow(title: "Body", value: post.body)
                 }
             }
+        }
+        .onRetry {
+            await self.viewModel.load()
+        }
+        .task {
+            await self.viewModel.load()
         }
     }
 }

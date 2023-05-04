@@ -13,17 +13,22 @@ public struct PostListPageView: View {
 
     public var body: some View {
         ScrollView {
-            LazyVStack {
-                ForEach(viewModel.items) { item in
-                    PostView(
-                        title: item.title,
-                        bodyText: item.body
-                    )
-                        .padding(.all, 10)
-                        .onTapGesture {
-                            viewModel.onPostTapped(item)
-                        }
+            WithLoadingState(state: viewModel.posts) { posts in
+                LazyVStack {
+                    ForEach(posts) { item in
+                        PostView(
+                            title: item.title,
+                            bodyText: item.body
+                        )
+                            .padding(.all, 10)
+                            .onTapGesture {
+                                viewModel.onPostTapped(item)
+                            }
+                    }
                 }
+            }
+            .onRetry {
+                await self.viewModel.load()
             }
         }
         .task {

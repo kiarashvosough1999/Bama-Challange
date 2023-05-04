@@ -16,24 +16,21 @@ internal final class PostListPageViewModel: ObservableObject {
         internal let body: String
     }
 
-    @Published internal var items: [PostItem]
+    @Published internal var posts: PageLoadState<[PostItem]> = .loading
     @Dependency(\.tapPostItemUseCase) private var tapPostItemUseCase
     @Dependency(\.fetchPostsUseCase) private var fetchPostsUseCase
 
     // MARK: - LifeCycle
 
-    init() {
-        self.items = []
-    }
-
     @MainActor
     internal func load() async {
         do {
-            self.items = try await fetchPostsUseCase.fetch().map {
+            let loadedPosts = try await fetchPostsUseCase.fetch().map {
                 return PostItem(id: $0.id, title: $0.title, body: $0.body)
             }
+            self.posts = .loaded(loadedPosts)
         } catch {
-            
+            self.posts = .failed(message: "Failed To Load")
         }
     }
 

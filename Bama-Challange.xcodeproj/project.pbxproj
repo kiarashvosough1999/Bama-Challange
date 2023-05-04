@@ -28,6 +28,10 @@
 		DE2F70BD2A00142700F4F263 /* MessageQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2F70BC2A00142700F4F263 /* MessageQueue.swift */; };
 		DE2F70BF2A00149400F4F263 /* PersistPostIDService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2F70BE2A00149400F4F263 /* PersistPostIDService.swift */; };
 		DE2F70C12A0014FA00F4F263 /* MessageQueue++PersistPostIDServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2F70C02A0014FA00F4F263 /* MessageQueue++PersistPostIDServiceProtocol.swift */; };
+		DE47D3242A03867A00D7DB68 /* PageLoadState.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE47D3232A03867A00D7DB68 /* PageLoadState.swift */; };
+		DE47D3262A0386A100D7DB68 /* BamaProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE47D3252A0386A100D7DB68 /* BamaProgressView.swift */; };
+		DE47D3282A0386DD00D7DB68 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE47D3272A0386DD00D7DB68 /* ErrorView.swift */; };
+		DE47D32A2A038DF700D7DB68 /* EmptyTabViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE47D3292A038DF700D7DB68 /* EmptyTabViewModifier.swift */; };
 		DE5B142529FE5C4500C56594 /* Bama_ChallangeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5B142429FE5C4500C56594 /* Bama_ChallangeApp.swift */; };
 		DE5B142729FE5C4500C56594 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5B142629FE5C4500C56594 /* Persistence.swift */; };
 		DE5B142A29FE5C4500C56594 /* Bama_Challange.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DE5B142829FE5C4500C56594 /* Bama_Challange.xcdatamodeld */; };
@@ -123,6 +127,10 @@
 		DE2F70BC2A00142700F4F263 /* MessageQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageQueue.swift; sourceTree = "<group>"; };
 		DE2F70BE2A00149400F4F263 /* PersistPostIDService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistPostIDService.swift; sourceTree = "<group>"; };
 		DE2F70C02A0014FA00F4F263 /* MessageQueue++PersistPostIDServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MessageQueue++PersistPostIDServiceProtocol.swift"; sourceTree = "<group>"; };
+		DE47D3232A03867A00D7DB68 /* PageLoadState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageLoadState.swift; sourceTree = "<group>"; };
+		DE47D3252A0386A100D7DB68 /* BamaProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BamaProgressView.swift; sourceTree = "<group>"; };
+		DE47D3272A0386DD00D7DB68 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
+		DE47D3292A038DF700D7DB68 /* EmptyTabViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyTabViewModifier.swift; sourceTree = "<group>"; };
 		DE5B142129FE5C4500C56594 /* Bama-Challange.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bama-Challange.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE5B142429FE5C4500C56594 /* Bama_ChallangeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bama_ChallangeApp.swift; sourceTree = "<group>"; };
 		DE5B142629FE5C4500C56594 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
@@ -288,6 +296,9 @@
 				DE1E418F29FE9B930057C4C3 /* PostView.swift */,
 				DE2F70AE2A0010FF00F4F263 /* TitleValueFormRow.swift */,
 				DEBCBD1D2A02DD8A00F1120B /* UserListItemView.swift */,
+				DE47D3232A03867A00D7DB68 /* PageLoadState.swift */,
+				DE47D3252A0386A100D7DB68 /* BamaProgressView.swift */,
+				DE47D3272A0386DD00D7DB68 /* ErrorView.swift */,
 			);
 			path = SubViews;
 			sourceTree = "<group>";
@@ -299,6 +310,7 @@
 				DE2F70B32A0011D800F4F263 /* OpacityAnimationModifier.swift */,
 				DE2F70B52A00124B00F4F263 /* TitleTextModifier.swift */,
 				DE2F70B72A00128600F4F263 /* BodyTextModifier.swift */,
+				DE47D3292A038DF700D7DB68 /* EmptyTabViewModifier.swift */,
 			);
 			path = Modifiers;
 			sourceTree = "<group>";
@@ -666,11 +678,13 @@
 				DE09636B29FEF36B00716928 /* PersistPostsServiceProtocol.swift in Sources */,
 				DE09635A29FEECAA00716928 /* NetworkServices++FetchPostsServiceProtocol.swift in Sources */,
 				DE8FAE2729FEA0FC009D0469 /* FetchPostsUseCase.swift in Sources */,
+				DE47D3242A03867A00D7DB68 /* PageLoadState.swift in Sources */,
 				DE5B142A29FE5C4500C56594 /* Bama_Challange.xcdatamodeld in Sources */,
 				DEBCBD1A2A02D96F00F1120B /* PersistGeoServiceProtocol.swift in Sources */,
 				DEBCBD0A2A02C96300F1120B /* PersistenceController++PersistAddressServiceProtocol.swift in Sources */,
 				DE8736672A017C0900FDA29F /* FetchUserListService.swift in Sources */,
 				DEEE95C129FE69C40061177C /* TabPage.swift in Sources */,
+				DE47D3262A0386A100D7DB68 /* BamaProgressView.swift in Sources */,
 				DE2F70BD2A00142700F4F263 /* MessageQueue.swift in Sources */,
 				DEBCBD182A02D96200F1120B /* PersistAddressServiceProtocol.swift in Sources */,
 				DE8FAE2C29FEA45A009D0469 /* PostListItem.swift in Sources */,
@@ -697,6 +711,7 @@
 				DE8FAE2529FE9F45009D0469 /* TapPostItemUseCase.swift in Sources */,
 				DE8FAE4029FEAAA7009D0469 /* API.swift in Sources */,
 				DE8FAE3029FEA715009D0469 /* NavigationService.swift in Sources */,
+				DE47D3282A0386DD00D7DB68 /* ErrorView.swift in Sources */,
 				DEBCBCFF2A02C70A00F1120B /* CDUserEntity+CoreDataClass.swift in Sources */,
 				DE1E418D29FE9ADA0057C4C3 /* PostListPageView.swift in Sources */,
 				DE1E418B29FE9ACF0057C4C3 /* PostListPageViewModel.swift in Sources */,
@@ -713,6 +728,7 @@
 				DEBCBD082A02C95600F1120B /* PersistenceController++PersistUserListServiceProtocol.swift in Sources */,
 				DE1E419029FE9B930057C4C3 /* PostView.swift in Sources */,
 				DE2F70AF2A0010FF00F4F263 /* TitleValueFormRow.swift in Sources */,
+				DE47D32A2A038DF700D7DB68 /* EmptyTabViewModifier.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
