@@ -11,7 +11,7 @@ This reposiroty contains a challange for Bama incoporation. The application show
 1. http://jsonplaceholder.typicode.com/{[post-id}
 2. http://jsonplaceholder.typicode.com/users
 
-### Current Features:
+### Current Architecture and Used Stack:
 
 - Pure SwiftUI
 - Unit Tests
