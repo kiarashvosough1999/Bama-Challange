@@ -14,7 +14,7 @@ This reposiroty contains a challange for Bama incoporation. The application show
 ### Current Architecture and Used Stack:
 
 - Github Action Enabled
-- Pure SwiftUI
+- Pure SwiftUI(Used enhanced components like LazyVStack for showing lists)
 - Unit Tests
 - Offline First
 - Used **`MVVM`** + **`Clean`** Architecture Pattern
