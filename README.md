@@ -13,6 +13,7 @@ This reposiroty contains a challange for Bama incoporation. The application show
 
 ### Current Architecture and Used Stack:
 
+- Github Action Enabled
 - Pure SwiftUI
 - Unit Tests
 - Offline First
